@@ -40,4 +40,5 @@ Header One | Header Two | Header Three
 Cell One | Cell 2 | Cell 3
 Col 1 | Col 2 | Col 3
 
-![Image of a Dog](https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*)
+
+![Image of a Cat](https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1280,c_limit/Culture-Grumpy-Cat-487386121.jpg)
