@@ -41,4 +41,4 @@ Cell One | Cell 2 | Cell 3
 Col 1 | Col 2 | Col 3
 
 
-![Image of a Cat](https://media.wired.com/photos/5cdefb92b86e041493d389df/191:100/w_1280,c_limit/Culture-Grumpy-Cat-487386121.jpg)
+![Return Of The Dog](laboratorium%202/dog.jpg)
