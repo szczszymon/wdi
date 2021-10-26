@@ -1,7 +1,11 @@
+# Poczatek programu
+# # Print pustych linii
+# Ich generacja ułatwi odnalezienie początku programu w terminalu
+print("\n\n")
 # Wprowadzenie liczb
 
 numb1 = float(input("Pierwsza liczba: "))
-numb2 = float(input("Druga liczba:"))
+numb2 = float(input("Druga liczba: "))
 
 # Sprawdzenie warunków liczb
 
@@ -26,5 +30,5 @@ if (numb1 * numb2) == 10:
     print("Yay!")
 
 print("Iloraz liczb (numb1 / numb2): ", numb1 / numb2)
-print("Kwadrat liczby 1: ", numb1 ** 2, "Kwadrat libczy 2: ", numb2 ** 2)
-print("Pierwiastekj liczby 1: ", numb1 ** (1/2), "Pierwiastek liczby 2: ", numb2 ** (1/2))
+print("Kwadrat liczby 1: ", numb1 ** 2, "\nKwadrat libczy 2: ", numb2 ** 2)
+print("Pierwiastekj liczby 1: ", numb1 ** (1/2), "\nPierwiastek liczby 2: ", numb2 ** (1/2))
