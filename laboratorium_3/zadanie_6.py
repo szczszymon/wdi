@@ -9,7 +9,7 @@ numb2 = float(input("Druga liczba: "))
 
 # Sprawdzenie warunków liczb
 
-if numb1 <= 0 and numb2 <= 0:
+if numb1 < 0 and numb2 < 0:
     print("Obie liczby są <= 0, kończenie programu")
     exit(0)
 
