@@ -1,9 +1,4 @@
-# Python 3.10 (obsługa match .. case ..)
-# Fix amount input when different than number
-# Create sheet with special cases and use it to verify program
-
-import time  # time
-
+# Python 3.10
 
 # Validating PIN
 def pin_check():
@@ -16,8 +11,7 @@ def pin_check():
             case 'anuluj':
                 return False
             case __:
-                print("\nWprowadzony kod PIN jest niepoprawny! Spróbuj ponownie za 2s")
-                time.sleep(2)  # time
+                print("\nWprowadzony kod PIN jest niepoprawny! Spróbuj ponownie")
         print('\n')
 
 
@@ -35,8 +29,16 @@ def write_info(current_status):
 
 def wplac():
     if pin_check():
-        print('\nWprowadź kwotę do dokonania wpłaty:')
-        amount = input()
+        while True:
+            print('\nWprowadź kwotę do dokonania wpłaty:')
+            amount = input()
+
+            try:
+                float(amount)
+                break
+
+            except ValueError:
+                print('Wprowadzone dane nie są liczbowe! Spróbuj ponownie\n')
 
         if float(amount) == 0.0:
             print('\nStan konta nie uległ zmianie')
@@ -66,12 +68,14 @@ def wyplac():
         while True:
             print('\nWprowadź kwotę do dokonania wypłaty:')
             amount = input()
-            if float(current_status) < float(amount):
-                print("Wprowadzona kwota przewyższa stan konta! Spróbuj ponownie za 2s")
-                time.sleep(2)  # time
-                print('\n')
-            else:
-                break
+            try:
+                if float(current_status) < float(amount):
+                    print("Wprowadzona kwota przewyższa stan konta! Spróbuj ponownie")
+                    print('\n')
+                else:
+                    break
+            except ValueError:
+                print('Wprowadzone dane nie są liczbowe! Spróbuj ponownie\n')
 
         if float(amount) == 0.0:
             print('\nStan konta nie uległ zmianie')
@@ -96,7 +100,6 @@ def saldo():
         print('\nOperacja nie powiodła się! - nie podano kodu PIN')
 
     print('\n')
-    # some code
 
 
 # Choice of operations
@@ -114,8 +117,7 @@ def operations():
         case 'zakończ':
             exit(0)
         case __:
-            print('\nPodana operacja jest nieprawidłowa! Spróbuj ponownie za 2s')
-            time.sleep(2)  # time
+            print('\nPodana operacja jest nieprawidłowa! Spróbuj ponownie')
             print('\n')
 
 
