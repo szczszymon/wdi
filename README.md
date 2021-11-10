@@ -41,4 +41,4 @@ Cell One | Cell 2 | Cell 3
 Col 1 | Col 2 | Col 3
 
 
-![Return Of The Dog](laboratorium%202/dog.jpg)
+![Return Of The Dog](laboratorium_2/dog.jpg)
