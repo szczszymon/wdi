@@ -27,18 +27,22 @@ def generate():
     for i in range(3):
         for j in range(3):
             while True:
-                status = True
-
-                # Pętla do różnych długości generowanych liczb
-                # for k in range(random.randint(len(digits[i]), len(digits[i]) + 10)):
-                for k in range(len(digits[i])):
+                # Losowanie długości nowej liczby
+                for k in range(random.randint(len(set(digits[i])), len(set(digits[i])) + 10)):
                     new_num += digits[i][random.randint(0, len(digits[i]) - 1)]
 
-                for digit in digits[i]:
-                    if digit not in new_num:
-                        status = False
-                        new_num = ""
-                        break
+                status = True
+                # Sprawdzenie czy 0 nie jest na początku
+                if len(new_num) != len(str(int(new_num))):
+                    new_num = ""
+                    status = False
+
+                if status:
+                    for digit in digits[i]:
+                        if digit not in new_num:
+                            status = False
+                            new_num = ""
+                            break
 
                 if status:
                     break
