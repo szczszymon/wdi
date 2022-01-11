@@ -1,7 +1,7 @@
 import copy
 
 
-def xd(n, result, output, curr_sum, start):
+def factorize(n, result, output, curr_sum, start):
     if curr_sum == n:
         result.append(copy.copy(output))
 
@@ -11,7 +11,7 @@ def xd(n, result, output, curr_sum, start):
         if temp_sum <= n:
             output.append(i)
 
-            xd(n, result, output, temp_sum, i)
+            factorize(n, result, output, temp_sum, i)
 
             output.pop()
 
@@ -35,7 +35,7 @@ def main():
         result = []
         output = []
 
-        xd(n, result, output, 0, 1)
+        factorize(n, result, output, 0, 1)
 
         print_res(result)
 
